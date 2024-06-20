@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    <h1>Categories</h1>
+    <ul>
+        {{range $index, $element := .categories}}
+            <li>
+                <h2>{{$element.Title}}</h2>
+                <p>{{$element.Text}}</p>
+                <p>Seo Key: {{$element.SeoKey}}</p>
+                <p>Seo Title: {{$element.SeoTitle}}</p>
+                <p>Seo Desc: {{$element.SeoDesc}}</p>
+                <p>Code: {{$element.Code}}</p>
+            </li>
+        {{end}}
+    </ul>
+</body>
+</html>

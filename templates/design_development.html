@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <title>{{ .page.Title }}</title>
+  </head>
+  <body>
+    <nav class="row1">
+      <div class="container1">
+        <div class="logo">
+          <a href="/">
+            <img src="https://positivs.ru/wp-content/themes/positive/images/logo_3.png" alt="Студия Позитив Дизайн">
+          </a>
+        </div>
+        <div class="nav-conteiner">
+          <nav>
+            <ul class="name_navPanel">
+              <li class="nav-item">
+                <a class="nav-link" href="/works">Работы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts">Контакты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services">Студия дизайна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/outdoor">Изготовление рекламы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </nav>
+    <div class="col-sm-12 hidden-xs">
+      <div class="innav"></div>
+    </div>
+    {{ if .page.Active }}
+    <div class="container_tovar">
+      <div class="ct_1">
+        <div class="col-md-33">
+          <h1>{{ .page.Title }}</h1>
+          <p>{{ .page.ShortText }}</p>
+        </div>
+        <div class="ConImg">
+          <article class="service">
+            {{range $index, $element := .services}}
+            <div class="a_service">
+              <a href="/services/{{$element.name}}">
+                <img src="/image/{{$element.image}}" alt="">
+                <h2>{{$element.title}}</h2>
+                <p class="pricer">от {{$element.min_price}} рублей</p>
+              </a>
+            </div>
+            {{end}}
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 hidden-xs">
+      <div class="innav"></div>
+    </div>
+    <div class="uniqueFooter">
+      <div class="uniqueContainer1234">
+        <div class="uniqueRow">
+          <div class="uniqueCol-sm-12"></div>
+          <div class="uniqueNavigator-left uniqueHidden-xs">
+            <ul class="uniqueSo_ul">
+              <li>
+                <a href="https://vk.com/positive_design" target="_blank">
+                  <img src="images/B.png" alt="vk" class="uniqueVk">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="uniqueCol-sm-4 uniqueLogo">
+            <div id="uniqueLogo-2">
+              <a href="/">
+                <img class="uniqueHidden-xs uniqueHidden-lg uniqueHidden-md" alt="Студия Позитив Дизайн" src="https://positivs.ru/wp-content/themes/positive/images/logo_2.png">
+              </a>
+            </div>
+          </div>
+          <div class="uniqueCol-sm-4 uniqueNavigator-right uniqueHidden-xs">
+            <a class="uniquePhone" href="/contacts"> Контакты </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ else }}
+    <h1>Страница удалена</h1>
+    {{ end }}
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Page</title>
+</head>
+<body>
+	<a class="nav-link navbar-link" href="/admin">На главную</a>
+	<h1>Create Page</h1>
+	<form action="/admin/save_page" method="post" enctype="multipart/form-data">
+		<div>
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title">
+		</div>
+		<div>
+			<label for="short_text">Short Text:</label>
+			<textarea id="short_text" name="short_text"></textarea>
+		</div>
+		<div>
+			<label for="preview">Image:</label>
+			<input type="file" id="preview" name="preview[]" multiple>
+		</div>			
+		<div>
+			<label for="text">Text:</label>
+			<textarea id="text" name="text"></textarea>
+		</div>
+		<div>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name">
+		</div>
+		<div>
+			<label for="parent">Parent:</label>
+			<select id="parent" name="parent">
+				<option value="">-- Select a parent page --</option>
+				{{ range .pages }}
+				<option value="{{ .ID }}">{{ .Title }}</option>
+				{{ end }}
+			</select>
+		</div>
+		<div id="priceContainer">
+			<div class="priceInput">
+				<div>
+					<label for="price_title">Price Title:</label>
+					<input type="text" class="price_title" name="price_title[]">
+				</div>
+				<div>
+					<label for="price_price">Price Price:</label>
+					<input type="text" class="price_price" name="price_price[]">
+				</div>
+				<div>
+					<label for="price_deadline">Price Deadline:</label>
+					<input type="text" class="price_deadline" name="price_deadline[]">
+				</div>
+				<button type="button" class="removePrice">Remove</button>
+			</div>
+		</div>
+
+		<button type="button" id="addPrice">Add Price</button>
+
+		
+            <label for="seo_title">SEO Title:</label>
+            <input type="text" id="seo_title" name="seo_title">
+        </div>
+        <div>
+            <label for="seo_description">SEO Description:</label>
+            <textarea id="seo_description" name="seo_description"></textarea>
+        </div>
+        <div>
+            <label for="seo_keywords">SEO Keywords:</label>
+            <input type="text" id="seo_keywords" name="seo_keywords">
+        </div>        
+		<button type="submit">Save</button>
+	</form>
+	<script>
+		document.getElementById('addPrice').addEventListener('click', function() {
+			var priceContainer = document.getElementById('priceContainer');
+			var priceInput = document.createElement('div');
+			priceInput.className = 'priceInput';
+			priceInput.innerHTML = `
+				<div>
+					<label for="price_title">Price Title:</label>
+					<input type="text" class="price_title" name="price_title[]">
+				</div>
+				<div>
+					<label for="price_price">Price Price:</label>
+					<input type="text" class="price_price" name="price_price[]">
+				</div>
+				<div>
+					<label for="price_deadline">Price Deadline:</label>
+					<input type="text" class="price_deadline" name="price_deadline[]">
+				</div>
+				<button type="button" class="removePrice">Remove</button>
+			`;
+			priceContainer.appendChild(priceInput);
+		});
+		
+		document.getElementById('priceContainer').addEventListener('click', function(event) {
+			if (event.target.classList.contains('removePrice')) {
+				event.target.parentElement.remove();
+			}
+		});
+		</script>
+		
+</body>
+</html>

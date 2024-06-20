@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css"> </head>
+
+<body>
+	<nav class="row1">
+		<div class="container1">
+			<div class="logo">
+				<a href="/"> <img src="https://positivs.ru/wp-content/themes/positive/images/logo_3.png" alt="Студия Позитив Дизайн"> </a>
+			</div>
+			<div class="nav-conteiner">
+				<nav>
+					<ul class="name_navPanel">
+						<li class="nav-item"> <a class="nav-link" href="/works">Работы</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="/about">О нас</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="/contacts">Контакты</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="/services">Студия дизайна</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="/outdoor">Изготовление рекламы</a> </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="col-sm-12 hidden-xs">
+			<div class="innav"></div>
+		</div>
+		<section class="contacts">
+			<div class="container1">
+				<div class="kontakts">
+					<div class="col-md-66">
+						<ul class="contacts-list">
+							<h1>Контакты</h1>
+							{{range .contacts}}
+								<li><i class="fas fa-phone-alt"></i> {{.Key}}: {{.Value}}</li>
+							{{end}}
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<div class="kontakt">
+							<div class="col-md-10 col-md-offset-2">
+								<div class="sider">
+									<h2>Задать вопрос</h2>
+									<form action="#" method="post">
+										<div class="form-group">
+											<label for="name">Ваше имя</label>
+											<input type="text" id="name" name="name" class="form-control" required> </div>
+										<div class="form-group">
+											<label for="email">Ваш email</label>
+											<input type="email" id="email" name="email" class="form-control" required> </div>
+										<div class="form-group">
+											<label for="message">Сообщение</label>
+											<textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+										</div>
+										<div class="g-recaptcha" data-sitekey="your_site_key"></div>
+										<button type="submit" class="btn btn-primary">Отправить</button>
+										<p class="Lcoglashenie" style="font-size:12px; font-family: Helvetica,Arial,sans-serif; line-height: 12px;">Отправляя нам запрос, вы <a href="http://positivs.ru/wp-content/uploads/2017/07/terms-1.pdf" target="_blank">соглашаетесь</a> с тем, что мы будем обрабатывать ваши персональные данные с целью предоставления вам наших услуг</p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="col-sm-12 hidden-xs">
+			<div class="innav"></div>
+		</div>
+		<div class="uniqueFooter">
+			<div class="uniqueContainer1234">
+				<div class="uniqueRow">
+					<div class="uniqueNavigator-left uniqueHidden-xs">
+						<ul class="uniqueSo_ul">
+							<li>
+								<a href="https://vk.com/positive_design" target="_blank"> <img src="images/B.png" alt="vk" class="uniqueVk"> </a>
+							</li>
+						</ul>
+					</div>
+					<div class="uniqueCol-sm-4 uniqueLogo">
+						<div id="uniqueLogo-2">
+							<a class="imagee" href="services.html"> <img class="uniqueHidden-xs uniqueHidden-lg uniqueHidden-md" alt="Студия Позитив Дизайн" src="https://positivs.ru/wp-content/themes/positive/images/logo_2.png"> </a>
+						</div>
+					</div>
+					<div class="uniqueCol-sm-4 uniqueNavigator-right uniqueHidden-xs"> <a class="uniquePhone" href="https://positivs.ru/contacts/"> Контакты </a> </div>
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>

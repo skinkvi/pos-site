@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Page</title>
+</head>
+<body>
+    <h1>Edit Page</h1>
+    <form action="/admin/save_page" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{ .page.ID }}">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{ .page.Title }}">
+        </div>
+
+        <div>
+            <label for="short_text">Short Text:</label>
+            <textarea id="short_text" name="short_text">{{ .page.ShortText }}</textarea>
+        </div>
+
+        <div>
+            <label for="preview">Image:</label>
+            {{ range .images }}
+                <img src="/image/{{ .Image }}" width="100">
+                <input type="hidden" name="old_preview[]" value="{{ .Image }}">
+            {{ end }}
+            <input type="file" id="preview" name="preview[]" multiple>
+        </div>
+
+        <div>
+            <label for="text">Text:</label>
+            <textarea id="text" name="text">{{ .page.Text }}</textarea>
+        </div>
+
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ .page.Name }}">
+        </div>
+
+        <div>
+            <label for="parent">Parent:</label>
+            <select id="parent" name="parent">
+                <option value="">-- Select a parent page --</option>
+                {{ range .parentPages }}
+                    <option value="{{ .ID }}" {{ if eq .ID .Parent }}selected{{ end }}>{{ .Title }}</option>
+                {{ end }}
+            </select>
+        </div>
+
+        <div id="priceContainer">
+            {{ range .prices }}
+                <div class="priceInput">
+                    <input type="hidden" name="price_id[]" value="{{ .ID }}">
+                    <div>
+                        <label for="price_title">Price Title:</label>
+                        <input type="text" class="price_title" name="price_title[]" value="{{ .Title }}">
+                    </div>
+                    <div>
+                        <label for="price_price">Price Price:</label>
+                        <input type="text" class="price_price" name="price_price[]" value="{{ .Price }}">
+                    </div>
+                    <div>
+                        <label for="price_deadline">Price Deadline:</label>
+                        <input type="text" class="price_deadline" name="price_deadline[]" value="{{ .Deadline }}">
+                    </div>
+                    <button type="button" class="removePrice">Remove</button>
+                </div>
+            {{ end }}
+        </div>
+
+        <button type="button" id="addPrice">Add Price</button>
+
+        <div>
+            <label for="seo_title">SEO Title:</label>
+            <input type="text" id="seo_title" name="seo_title" value="{{ .seo.Title }}">
+        </div>
+
+        <div>
+            <label for="seo_description">SEO Description:</label>
+            <textarea id="seo_description" name="seo_description">{{ .seo.Description }}</textarea>
+        </div>
+
+        <div>
+            <label for="seo_keywords">SEO Keywords:</label>
+            <input type="text" id="seo_keywords" name="seo_keywords" value="{{ .seo.Keywords }}">
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <script>
+        document.getElementById('addPrice').addEventListener('click', function() {
+            var priceContainer = document.getElementById('priceContainer');
+            var priceInput = document.createElement('div');
+            priceInput.className = 'priceInput';
+            priceInput.innerHTML = `
+                <div>
+                    <label for="price_title">Price Title:</label>
+                    <input type="text" class="price_title" name="price_title[]">
+                </div>
+                <div>
+                    <label for="price_price">Price Price:</label>
+                    <input type="text" class="price_price" name="price_price[]">
+                </div>
+                <div>
+                    <label for="price_deadline">Price Deadline:</label>
+                    <input type="text" class="price_deadline" name="price_deadline[]">
+                </div>
+                <button type="button" class="removePrice">Remove</button>
+            `;
+            priceContainer.appendChild(priceInput);
+        });
+
+        document.getElementById('priceContainer').addEventListener('click', function(event) {
+            if (event.target.classList.contains('removePrice')) {
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="web/controller.viewport, initial-scale=1.0">
+    <title>{{ .mainPage.Title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2o" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="row1 navbar">
+      <div class="container1 navbar-container">
+        <div class="logo navbar-logo">
+          <a href="/">
+            <img src="https://positivs.ru/wp-content/themes/positive/images/logo_3.png" alt="Студия Позитив Дизайн">
+          </a>
+        </div>
+        <div class="nav-conteiner navbar-nav">
+          <nav>
+            <ul class="name_navPanel navbar-menu">
+              <li class="nav-item navbar-item">
+                <a class="nav-link navbar-link" href="/works">Работы</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link navbar-link" href="/about">О нас</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link navbar-link" href="/contacts">Контакты</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link navbar-link" href="/services">Студия дизайна</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link navbar-link" href="/outdoor">Изготовление рекламы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-sm-12 hidden-xs">
+        <div class="innav"></div>
+      </div>
+    </nav>
+    {{ if .mainPage.Preview }}
+    <div class="kartinka">
+		<div class="item123" style="background-image: url('/image/{{ .mainPage.Preview }}');">
+		</div>
+	</div>
+    {{ else }}
+    <p>Preview not found</p>
+    {{ end }}
+    <div class="wrapperoo">
+      <div class="row3">
+        <div class="conteiner21">
+          {{ range $index, $element := .categories }}
+          <a href="/{{ $element.Name }}" class="overlay-text">
+            <img src="/image/{{ $element.Preview }}" class="service12" alt="...">
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    </div>
+    <section class="home-services-a">
+      <div class="container1">
+        <div class="relamnoe">
+          <h1 class="h1-text">{{ .mainPage.Title }}</h1>
+          <h1 class="h11-text">{{ .mainPage.ShortText }}</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Перебираем рандомные товары и отображаем их информацию -->
+    {{ range $index, $element := .pages }}
+    <section class="unique-services">
+      <div class="unique-container">
+        <div class="unique-row">
+          <div class="unique-col-1">
+            <article class="unique-service-1">
+              <a href="/services/{{ $element.Name }}">
+                <img src="/image/{{ $element.Preview }}" class="image-Max" alt="..." />
+                <h2 class="unique-h2-1">{{ $element.Title }}</h2>
+              </a>
+            </article>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    <p>{{ .mainPage.Text }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud3lXs4SXk3sooTZSVeJgXt43WkARjbJMn3LV5pZlsgM7" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <div class="col-sm-12 hidden-xs">
+		<div class="innav"></div>
+	</div>
+	<div class="uniqueFooter">
+		<div class="uniqueContainer1234">
+			<div class="uniqueRow">
+				<div class="uniqueNavigator-left uniqueHidden-xs">
+					<ul class="uniqueSo_ul">
+						<li>
+							<a href="https://vk.com/positive_design" target="_blank"> <img src="images/B.png" alt="vk"
+									class="uniqueVk"> </a>
+						</li>
+					</ul>
+				</div>
+				<div class="uniqueCol-sm-4 uniqueLogo">
+					<div id="uniqueLogo-2">
+						<a class="imagee" href="services.html"> <img
+								class="uniqueHidden-xs uniqueHidden-lg uniqueHidden-md" alt="Студия Позитив Дизайн"
+								src="https://positivs.ru/wp-content/themes/positive/images/logo_2.png"> </a>
+					</div>
+				</div>
+				<div class="uniqueCol-sm-4 uniqueNavigator-right uniqueHidden-xs"> <a class="uniquePhone"
+						href="https://positivs.ru/contacts/"> Контакты </a> </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

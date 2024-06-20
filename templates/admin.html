@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+  </head>
+  <body>
+    <h1>Здраствуйте это страничка для управлением сайтом Positiv</h1>
+    <a href="/admin/create_page">
+      <button>Создать страничку</button>
+    </a>
+    <ul> {{ range .pages }}
+      <li> {{ .Title }}
+        <a href="/admin/edit_page/{{ .ID }}">
+          <button>Изменить страницу</button>
+        </a> {{ end }}
+      </li>
+    </ul>
+  </body>
+</html>

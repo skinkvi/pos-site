@@ -1,0 +1,1074 @@
+/*{
+  outline: 2px solid green !important;
+}*/
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 1000px;
+}
+
+.item {
+  margin: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.img1234234 {
+  width: auto;
+}
+
+@media (max-width: 1200px) {
+  .img1234234 {
+      height:325px
+  }
+}
+
+.conteiner21 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .item123 {
+      width:750px
+  }
+}
+
+@media (min-width: 992px) {
+  .item123 {
+      width:970px
+  }
+}
+
+@media (min-width: 1200px) {
+  .item123 {
+      width:1170px
+  }
+}
+
+.kartinka{
+  padding: 6px;
+  width: 100%;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+}
+
+.img1234234 {
+  width: 100%; /* Устанавливает ширину изображения на 100% */
+  height: auto; /* Автоматически устанавливает высоту, чтобы сохранить пропорции изображения */
+  object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
+}
+.item123 {
+  position: relative; 
+  width: 800px; 
+  height:200px; 
+
+}
+
+.service12 {
+  position: relative;
+  margin: 10px;
+  display: block;
+
+}
+
+.img1 {
+  width: 212px;
+  height: 140px;
+  object-fit: cover; 
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: block;
+
+}
+
+.service12:hover .overlay {
+  opacity: 1;
+}
+
+.h1-text, .h11-text{
+  display: flex;
+  justify-content: center;
+}
+
+/* различные банеры */
+
+* {
+  box-sizing: border-box;
+}
+
+.unique-services {
+  font-family: "Roboto", sans-serif;
+
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+ font-size: 14px;
+
+}
+
+.unique-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.unique-row {
+  margin: 0 -15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.unique-col-1{
+  padding: 0 15px;
+  max-width: 25%;
+}
+
+.unique-service-1 {
+  padding: 10px;
+  text-align: center;
+}
+
+.unique-service-1 img{
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.unique-h2-1{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.unique-h2-1:hover{
+  color: #fedb1b;
+}
+
+.unique-p-1{
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .unique-container {
+      width:750px
+  }
+}
+
+@media (min-width: 992px) {
+  .unique-container {
+      width:970px
+  }
+}
+
+@media (min-width: 1200px) {
+  .unique-container {
+      width:1170px
+  }
+}
+
+
+
+
+
+
+
+/*              Мы — рекламное агентство          */
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*               страница с товаром               */
+
+
+/* перегородка */
+.col-sm-12{
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+.innav{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  height: 6px;
+  background: #eaeaea;
+}
+/* перегородка */
+
+.singlepage{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  display: block;
+  margin:  0 0 0;
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+}
+
+:root {
+  --main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --main-color: #333;
+}
+
+.container5{
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.row123{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+
+}
+
+.col-md-5555{
+  font-family: var(--main-font);
+  color: var(--main-color);
+  box-sizing: border-box;
+  padding: 0 35px; 
+  width: 44%; 
+  
+}
+
+.sidecont {
+  display: block;
+}
+
+
+.sideimg{
+  font-size: 14px;
+  line-height: 24px;
+  box-sizing: border-box;
+  width: 434px;
+}
+
+.oeg2{
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 16px; 
+  line-height: 1.5; 
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.row000{
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-md-10{
+  display: flex;
+  justify-content: center
+  
+}
+
+.sider ul{
+  padding: 0;
+  padding-left: 0;
+}
+
+.sider ul li a{
+  color: #000;
+
+}
+
+.container5 {
+  margin-top: 15px;
+}
+
+*{
+  list-style-type: none;
+}
+
+.breadcrumb {
+  padding: 0 .5rem;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: "→";
+}
+
+.col-md-7777{
+display: flex;
+ float: left;
+ width: 58%;
+flex-direction: column;
+
+
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.SiderHov:hover {
+  color: #fedb1b;
+}
+
+
+.btn-zak {
+  background-color: yellow; 
+  color: black; 
+  border: none; 
+  padding: 15px 32px; 
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 26px;
+  transition-duration: 0.4s; 
+  cursor: pointer;
+}
+
+.btn-zak:hover {
+  background-color: lightyellow; 
+  color: black; 
+}
+
+.zakaz {
+  flex-direction: column;
+  font-size: 26px; 
+  color: #333; 
+}
+
+.zak-phone {
+  font-weight: bold; 
+}
+.rowNam{
+  padding-left: 5px; 
+  padding-top: 5px;
+  
+}
+
+@media (max-width: 768px) {
+  .row123 {
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .col-md-7777 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .col-md-5555 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+.container5{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.singlepage{
+  width: 100%;
+}
+.row000{
+  display: flex;
+  width: 100%;
+}
+
+.col-xs-6 {
+  display: flex;
+  justify-content: center;
+  display: grid;
+}
+
+.zakaz{
+  font-size: 17px;
+}
+
+}
+
+/* перегородка */
+
+
+
+/*               страница с товаром               */
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*     самая нижнея панель на всех страницах      */ 
+
+.uniqueFooter {
+  padding: 30px 60px;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.uniqueVk:hover {
+  color: #fedb1b;
+}
+
+.uniqueFooter .uniquePhone {
+  font-size: 24px;
+  color: #000000;
+  display: block;
+  position: relative;
+}
+
+.uniquePhone:hover {
+  color: #fedb1b;
+}
+
+.uniqueFooter .uniqueRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.uniqueFooter .uniqueNavigator-left,
+.uniqueFooter .uniqueCol-sm-4, 
+.uniqueFooter .uniqueNavigator-right {
+  margin: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .uniqueFooter .uniqueRow {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .uniqueFooter .uniqueNavigator-left {
+    order: 2;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .uniqueFooter .uniqueNavigator-right {
+    order: 3;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .uniqueFooter .uniqueLogo {
+    order: 1;
+  }
+
+  .uniqueSo_ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+/* это был css файл под названием дизайн но в конечном 
+итоге когда я стал исправлять свои ошибки с файлами и 
+наименованиеями у меня много что поломалось и сейчас это 
+код ниже отвечает за страничку с дизайном и рекламой   */
+
+.ConImg{
+  margin-top: 20px;
+}
+
+.page {
+  padding: 30px 0;
+  padding-bottom: 30px;
+}
+
+.container_tovar {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .container_tovar {
+    padding: 0;
+  }
+
+}
+
+
+.ct_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-md-3,
+.imageContener { 
+  padding: 0 25px;
+}
+
+.col-md-33{
+  width: 90%;
+}
+
+
+.imageContener {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-md-33>h1 {
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Bebas Neue", sans-serif;
+  font-size:1.5rem;
+  color: #212529;
+
+}
+
+.col-md-33>p {
+  box-sizing: border-box;
+  margin: 0 0 1.5em;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #212529;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.service img {
+  max-width: 80%;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service h2 {
+  display: block;
+  box-sizing: border-box;
+  margin: 10px 0 0;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 15px;
+  color: #212529;
+  text-align: center; 
+}
+
+.service .pricer {
+  display: block;
+  box-sizing: border-box;
+  margin: 5px 0 0;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #777;
+  text-align: center; 
+  text-decoration: none;
+}
+
+@media (min-width: 968px) {
+  .ct_1 {
+    flex-direction: row;
+  }
+.col-md-3{
+  width: 20%;
+  float: left;
+}
+}
+
+@media (min-width: 568px) {
+.col-md-3{
+  width: 33%;
+}
+}
+
+@media (max-width: 950px){
+  .ct_1{
+    display: flex;
+    flex-direction:column ;
+  }
+
+  .col-md-33{
+    width: 100%;
+  }
+
+  .col-md-33>h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .col-md-33>p {
+    display: flex;
+    justify-content: center;
+  }
+
+
+}
+
+
+
+
+/*-----файл для страницы с дизайном и рикламой----*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*--------------- страничка - О нас --------------*/ 
+
+.section-about-positive {
+  color: #ebdd17; 
+  font-family: 'Arial', sans-serif; 
+
+}
+
+.container-design-agency {
+  padding: 20px;
+}
+
+.header-main-message {
+  color: #edf10b; 
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.paragraph-description {
+  line-height: 1.6; 
+  font-size: 18px
+}
+
+.highlighted-text, .custom-link {
+  color: #cbba21; 
+  text-shadow: 1px 1px 1px #f7ff06; 
+  font-weight: bold;
+}
+
+.custom-link {
+  text-decoration: none; 
+  font-size: 18px;
+}
+
+.custom-link:hover {
+  color: #c7a500; 
+  text-decoration: underline; 
+}
+
+
+/*--------------- страничка - О нас --------------*/ 
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*----------------- контакты ---------------------*/ 
+
+
+.kontakts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item {
+  flex: 0 0 300px;
+  background: #cccccc;
+  margin: 10px;
+}
+
+
+.service h2 a {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .item{
+      flex: 0 0 200px;
+     
+      background: #cccccc;
+      color: #fff;
+  }
+}
+
+@media (max-width: 722px) {
+  .kontakt {
+    flex-direction: column;
+  }
+  .item12 {
+      flex: 0 0 150px;
+      background: #cccccc;
+      color: #fff;
+  }
+}
+
+@media (max-width: 722px) {
+.kontakts {
+  flex-direction: column;
+  
+}
+}
+
+@media (max-width: 722px) {
+
+.kontakts, .col-md-66, .contacts-list, .fas {
+display: flex;
+flex-direction: column;
+align-items: center
+}
+
+}
+
+*{
+  font-family: "Roboto", sans-serif;
+}
+
+.contacts {
+background-color: #f8f9fa;
+padding: 30px 0;
+}
+
+
+.col-md-6 {
+width: 50%;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.contacts h1,
+.sider h2 {
+color: #333;
+margin-bottom: 20px;
+margin: 10px;
+}
+
+.col-md-66{
+  max-width: 362px;
+}
+
+.contacts-list {
+list-style: none;
+padding: 0;
+}
+
+.contacts-list li {
+margin-bottom: 10px;
+font-size: 16px;
+color: #555;
+}
+
+.contacts-list i {
+margin-right: 10px;
+color: #007bff;
+}
+
+.contacts-list a {
+color: #007bff;
+text-decoration: none;
+}
+
+.contacts-list a:hover {
+text-decoration: underline;
+}
+
+.form-control {
+display: block;
+width: 100%;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+color: #495057;
+background-color: #fff;
+border-color: #80bdff;
+outline: 0;
+box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+color: #fff;
+background-color: #007bff;
+border-color: #007bff;
+}
+
+.btn-primary:hover {
+color: #fff;
+background-color: #0069d9;
+border-color: #0062cc;
+}
+
+.g-recaptcha {
+margin: 20px 0;
+}
+
+
+.col-md-6 {
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contacts-list i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.contacts-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contacts-list a:hover {
+  text-decoration: underline;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.g-recaptcha {
+  margin: 20px 0;
+}
+
+.Lcoglashenie{
+padding-top: 10px;
+}
+
+
+/*---------------     контакты      --------------*/ 
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------ навигационная панель --------------*/ 
+
+
+body {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+@font-face {
+    font-family: 'Bebas Bold';
+    src: url('BebasBold.ttf') format('truetype');
+  }
+
+.logo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        height: 50px;
+        background: #ffffff;
+        color: #fff;
+        align-items: center;
+    }
+}
+
+.nav-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-conteiner>nav>ul{
+    display: flex ;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    align-items: center;
+    color: black;
+    font-family: "BebasBold";
+}
+
+.nav-conteiner>nav>ul>li>a{
+    display: flex;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    line-height: 36px;
+    color: #000;
+}
+
+.nav-link:hover{
+    color: #fedb1b;
+}
+
+.conteiner{
+    width: 1170px;
+}
+
+  @media (max-width: 722px) {
+
+    .wrapper{
+        flex-direction:column ;
+        height: 50px;
+        background: #ffffff;
+        color: #fff;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .name_navPanel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }
+  
+  
+*{
+    text-decoration: none;
+}
+
+
+
+
+
